@@ -9,12 +9,12 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('id');  // ID_User sebagai primary key
-            $table->string('name');  // Kolom Nama
-            $table->string('email')->unique();  // Kolom Email, pastikan unik
-            $table->string('password');  // Kolom Password
-            $table->string('role')->default('Admin');  // Kolom Role
-            $table->timestamps();  // Timestamps: created_at, updated_at
+            $table->id('id');  
+            $table->string('name');  
+            $table->string('email')->unique();  
+            $table->string('password');  
+            $table->string('role')->default('Admin');  
+            $table->timestamps();  
         });
     }
 

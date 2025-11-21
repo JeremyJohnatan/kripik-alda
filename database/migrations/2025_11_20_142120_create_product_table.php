@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product', function (Blueprint $table) {
-             $table->id('ID_Produk');  // Primary key
+            $table->id('ID_Produk');  
             $table->string('Nama_Produk');
             $table->text('Deskripsi');
             $table->decimal('Harga', 10, 2);
@@ -21,10 +21,6 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('product');
