@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -22,5 +22,7 @@ Route::middleware('auth')->group(function () {
     // CRUD Product (auth wajib)
     Route::resource('product', ProductController::class);
 });
+
+Route::resource('transaksi', TransaksiController::class);
 
 require __DIR__.'/auth.php';
