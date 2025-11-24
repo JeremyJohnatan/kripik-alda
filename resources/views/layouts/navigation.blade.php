@@ -25,6 +25,10 @@
                     <x-nav-link :href="route('transaksi.index')" :active="request()->routeIs('transaksi.*')">
                         {{ __('Transaksi') }}
                     </x-nav-link>
+                    {{-- keranjang --}}
+                    <x-nav-link :href="route('keranjang.index')" :active="request()->routeIs('keranjang.*')">
+                        {{ __('keranjang') }}
+                    </x-nav-link>
                 </div>
             </div>
 

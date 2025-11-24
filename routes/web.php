@@ -2,6 +2,7 @@
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\KeranjangController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,4 +26,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('transaksi', TransaksiController::class);
 
+
+Route::resource('keranjang', KeranjangController::class);
 require __DIR__.'/auth.php';
