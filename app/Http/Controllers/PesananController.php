@@ -10,20 +10,19 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class PesananController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         $transaksi = Transaksi::with([
-                    'detail' => function ($q) {
-                        $q->select(
-                            'id_transaksi',
-                            'id_produk',
-                            DB::raw('SUM(jumlah) as total_jumlah')
-                        )
-                        ->groupBy('id_transaksi', 'id_produk');
-                    },
-                    'detail.product'
-                ])->get();
-
+                'detail' => function ($q) {
+                    $q->select(
+                        'id_transaksi',
+                        'id_produk',
+                        DB::raw('SUM(jumlah) as total_jumlah')
+                    )
+                    ->groupBy('id_transaksi', 'id_produk');
+                },
+                'detail.product'
+            ])->get();
 
         return view('pesanan.index', compact('transaksi'));
     }
