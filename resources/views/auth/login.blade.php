@@ -14,7 +14,7 @@
 
             <!-- LEFT -->
             <div class="login-alda-left">
-                <img src="{{ asset('assets/img/alda/logo.png') }}" alt="Logo ALDA" class="login-logo">
+                <img src="{{ asset('assets/img/alda/mascot.png') }}" alt="Logo ALDA" class="login-logo">
             </div>
 
             <!-- RIGHT -->

@@ -472,6 +472,10 @@ input {
     padding: 1.5rem;
     padding-top: 3rem;
 }
+/* Class khusus penghilang padding */
+.main-area.no-padding {
+    padding: 0 !important;
+}
 
 .table {
     color: #000;

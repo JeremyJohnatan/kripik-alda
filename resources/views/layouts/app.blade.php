@@ -68,7 +68,7 @@
     @endif
 
 @else
-    <main class="main-area fix">
+    <main class="main-area fix {{ request()->routeIs('login',) ? 'no-padding' : '' }}">
         @yield('content')
     </main>
 @endif
